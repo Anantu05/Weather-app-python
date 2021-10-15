@@ -24,9 +24,9 @@ while True:
 			print("Please enter a real city's name... not an imaginary ones' xd")
 
 	def search(city_name):
-		weather = getweather(city_name)
-		if weather:
-			print(f"{'-'*35}\nCity: {weather[0]}, {weather[1]}\nTemperature: {weather[2]}\nWeather conditions: {weather[3]}\nDescription: {weather[4]}\n\nAdditional Details:\n\tWind speed: {weather[5]}km/h\n\tWind direction: {weather[6]} Degrees\n\tHumidity: {weather[7]}%\n{'-'*35}")
+		data = getweather(city_name)
+		if data:
+			print(f"{'-'*35}\nCity: {data[0]}, {data[1]}\nTemperature: {data[2]}\nWeather conditions: {data[3]}\nDescription: {data[4]}\n\nAdditional Details:\n\tWind speed: {data[5]}km/h\n\tWind direction: {data[6]} Degrees\n\tHumidity: {data[7]}%\n{'-'*35}")
 		else:
 			return 'Error', f"Cannot find {city}",'\n'+"Please enter a real city's name... not an imaginary ones' xd"
 
